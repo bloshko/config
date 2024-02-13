@@ -1,0 +1,11 @@
+*
+
+!.gitignore
+!fish
+!nvim
+!fish/config.fish
+!nvim/**/*
+!starship.toml
+
+!alacritty
+!alacritty/alacritty.yml
