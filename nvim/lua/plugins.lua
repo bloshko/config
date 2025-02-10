@@ -25,27 +25,15 @@ return require("packer").startup(function(use)
 		},
 	})
 	use("mbbill/undotree")
-	use("tpope/vim-fugitive")
-	use({
-		"VonHeikemen/lsp-zero.nvim",
-		branch = "v1.x",
-		requires = {
-			-- LSP Support
-			{ "neovim/nvim-lspconfig" }, -- Required
-			{ "williamboman/mason.nvim" }, -- Optional
-			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+	use("neovim/nvim-lspconfig")
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
 
-			-- Autocompletion
-			{ "saadparwaiz1/cmp_luasnip" }, -- Optional
-			{ "hrsh7th/cmp-nvim-lua" }, -- Optional
+	use("saadparwaiz1/cmp_luasnip")
+	use("hrsh7th/cmp-nvim-lua")
 
-			-- Snippets
-			{ "L3MON4D3/LuaSnip" }, -- Required
-			{ "rafamadriz/friendly-snippets" }, -- Optional
-		},
-	})
-	---
-	-- Completion
+	use("L3MON4D3/LuaSnip")
+	use("rafamadriz/friendly-snippets")
 	use("hrsh7th/nvim-cmp")
 
 	-- LSP completion source:
@@ -90,9 +78,13 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
-	-- use("simrat39/rust-tools.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("mfussenegger/nvim-dap")
 	use({ "ellisonleao/gruvbox.nvim" })
 	use("romgrk/barbar.nvim")
+	use({
+		"pmizio/typescript-tools.nvim",
+		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	})
+	use("mfussenegger/nvim-lint")
 end)
