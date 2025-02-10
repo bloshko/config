@@ -71,17 +71,12 @@ vim.keymap.set("v", "<leader>y", '"+y')
 --
 -- Neoformat
 -- format the file
-vim.keymap.set("n", "<leader>f", ":Neoformat<CR>")
+vim.keymap.set("n", "<leader>f", ":Neoformat<CR>|:silent! EslintFixAll<CR>")
 
 --
 -- LSP
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
-
---
--- Fugitive
--- open git fugitive
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
 --
 -- Undotree
