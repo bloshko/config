@@ -11,13 +11,10 @@ require("nvim-treesitter.configs").setup({
 		"json",
 		"tsx",
 		"gitcommit",
-		"help",
 		"javascript",
-		"typescript",
 		"c",
 		"lua",
 		"vim",
-		"help",
 		"query",
 	},
 
