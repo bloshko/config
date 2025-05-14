@@ -36,7 +36,6 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp")
 
 	-- Useful completion sources:
-	use("hrsh7th/cmp-nvim-lua")
 	use("hrsh7th/cmp-nvim-lsp-signature-help")
 	use("hrsh7th/cmp-vsnip")
 	use("hrsh7th/cmp-path")
@@ -84,4 +83,5 @@ return require("packer").startup(function(use)
 	})
 	use("mfussenegger/nvim-lint")
 	use("rust-lang/rust.vim")
+	use("leoluz/nvim-dap-go")
 end)
