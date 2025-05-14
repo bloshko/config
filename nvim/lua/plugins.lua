@@ -11,10 +11,6 @@ return require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
-	-- use({
-	-- 	"glepnir/zephyr-nvim",
-	-- 	requires = { "nvim-treesitter/nvim-treesitter", opt = true },
-	-- })
 	use("navarasu/onedark.nvim")
 	use({ "rose-pine/neovim", as = "rose-pine" })
 	use({
@@ -87,4 +83,5 @@ return require("packer").startup(function(use)
 		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 	})
 	use("mfussenegger/nvim-lint")
+	use("rust-lang/rust.vim")
 end)
