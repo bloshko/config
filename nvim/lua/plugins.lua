@@ -12,7 +12,7 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 	use("navarasu/onedark.nvim")
-	use({ "rose-pine/neovim", as = "rose-pine" })
+	-- use({ "rose-pine/neovim", as = "rose-pine" })
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
@@ -74,7 +74,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("nvim-lua/plenary.nvim")
-	use("mfussenegger/nvim-dap")
 	use({ "ellisonleao/gruvbox.nvim" })
 	use("romgrk/barbar.nvim")
 	use({
@@ -82,6 +81,7 @@ return require("packer").startup(function(use)
 		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 	})
 	use("mfussenegger/nvim-lint")
-	use("rust-lang/rust.vim")
+	use("mrcjkb/rustaceanvim")
+	use("mfussenegger/nvim-dap")
 	use("leoluz/nvim-dap-go")
 end)
